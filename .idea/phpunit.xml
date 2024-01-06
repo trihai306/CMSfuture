@@ -6,6 +6,9 @@
         <option value="$PROJECT_DIR$/form/tests" />
         <option value="$PROJECT_DIR$/table/tests" />
         <option value="$PROJECT_DIR$/core/tests" />
+        <option value="$PROJECT_DIR$/packages/core/tests" />
+        <option value="$PROJECT_DIR$/packages/form/tests" />
+        <option value="$PROJECT_DIR$/packages/table/tests" />
       </list>
     </option>
   </component>
