@@ -1,5 +1,5 @@
 <?php
-namespace Future\Form\Livewire\Forms\Layouts;
+namespace Future\Table\Livewire\Tables\Columns;
 
 
 use Future\Table\Livewire\Tables\Column;
@@ -128,7 +128,7 @@ class TextColumn extends Column
         }
 
         $renderedValue = new HtmlString($this->renderCallback ? call_user_func($this->renderCallback, $model, $value) : $value);
-        return view('core::base.table.column', [
+        return view('future::base.table.column', [
             'value' => $renderedValue,
             'iconHtml' => $iconHtml,
             'iconCopy' => $iconCopy,

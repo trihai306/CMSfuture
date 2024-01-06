@@ -1,5 +1,5 @@
 <?php
-namespace Future\Table\Livewire\Tables\Columns;
+namespace Future\Form\Livewire\Forms\Layouts;
 
 class Row{
     protected $classes = '';

@@ -28,7 +28,7 @@
 
     @yield('content')
 </div>
-@include('core::components.page-loader')
+@include('future::components.page-loader')
 <!-- Libs JS -->
 <!-- Tabler Core -->
 
@@ -36,7 +36,7 @@
 @livewireScripts
 <script src="{{ asset('dist/js/tabler.min.js') }}" defer></script>
 <script src="{{ asset('dist/js/demo.min.js') }}" defer></script>
-@include('core::components.scripts.swal')
+@include('future::components.scripts.swal')
 @yield('script')
 </body>
 </html>

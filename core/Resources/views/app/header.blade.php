@@ -1,2 +1,2 @@
-@include('core::app.header.top')
-@include('core::app.header.menu')
+@include('future::app.header.top')
+@livewire('future::livewire.admin.menu-header')

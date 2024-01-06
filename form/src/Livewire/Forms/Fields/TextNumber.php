@@ -44,7 +44,7 @@ class TextNumber extends Field
 
     public function render()
     {
-        return view('core::base.form.textnumber', [
+        return view('future::base.form.textnumber', [
             'isRequired' => $this->isRequired,
             'classes' => $this->classes,
             'attributes' => $this->getAttributes(),

@@ -2,7 +2,13 @@
 
 namespace Future\Core;
 
+use Future\Core\Livewire\Admin\MenuHeader;
+use Future\Core\Livewire\Admin\Notifications\NotificationIcon;
+use Future\Core\Livewire\Admin\Notifications\Notifications;
+use Future\Core\Livewire\Auth\Login;
 use Illuminate\Support\ServiceProvider;
+use Livewire\Livewire;
+
 
 class CoreServiceProvider extends ServiceProvider
 {
@@ -13,10 +19,14 @@ class CoreServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+        Livewire::component('future::livewire.auth.login', Login::class);
+        Livewire::component('future::livewire.admin.menu-header', MenuHeader::class);
+        Livewire::component('future::livewire.admin.notifications', Notifications::class);
+        Livewire::component('future::livewire.admin.notifications.icon', NotificationIcon::class);
          $this->loadTranslationsFrom(__DIR__.'/../resources/lang', 'future');
          $this->loadViewsFrom(__DIR__.'/../resources/views', 'future');
          $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
-         $this->loadRoutesFrom(__DIR__.'/routes.php');
+         $this->loadRoutesFrom(__DIR__.'/../routes/web.php');
 
         // Publishing is only necessary when using the CLI.
         if ($this->app->runningInConsole()) {

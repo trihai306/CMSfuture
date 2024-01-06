@@ -13,7 +13,6 @@
     "keywords": ["Laravel", "Form"],
     "require": {
         "php": "^8.1",
-        "illuminate/support": "~9",
         "livewire/livewire": "^v3.3.5"
 
     },

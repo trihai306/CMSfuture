@@ -198,7 +198,7 @@
         <!--end::Card body-->
     </div>
     <!--end::Card-->
-    @include('core::livewire.table.export')
-    @include('core::livewire.table.import')
-    @include('core::livewire.table.filter')
+    @include('future::livewire.table.export')
+    @include('future::livewire.table.import')
+    @include('future::livewire.table.filter')
 </div>

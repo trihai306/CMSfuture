@@ -20,7 +20,6 @@ abstract class BaseForm extends Component
         $this->id = $id;
         if ($this->id) {
             $this->model = $this->model::find($this->id);
-//            dd($this->form(new Form())->render());
             $this->data = $this->model->toArray();
         }
     }

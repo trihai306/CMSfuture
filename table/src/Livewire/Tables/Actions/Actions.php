@@ -44,7 +44,7 @@ class Actions {
      */
     public function renderAsButtons(): \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
     {
-        return view('core::base.buttons', ['actions' => $this->actions]);
+        return view('future::base.buttons', ['actions' => $this->actions]);
     }
 
     /**
@@ -53,7 +53,7 @@ class Actions {
      * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Foundation\Application
      */
     public function renderAsDropdown() {
-        return view('core::base.dropdown', ['actions' => $this->actions]);
+        return view('future::base.dropdown', ['actions' => $this->actions]);
     }
 
     public function render() {

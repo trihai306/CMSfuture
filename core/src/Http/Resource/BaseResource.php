@@ -3,6 +3,8 @@
 namespace Future\Core\Http\Resource;
 
 use App\Http\Controllers\Controller;
+use Future\Form\Livewire\BaseForm;
+use Future\Table\Livewire\BaseTable;
 use Illuminate\Http\Request;
 
 
@@ -21,18 +23,18 @@ abstract class BaseResource extends Controller
     public function index(Request $request)
     {
         $table = $this->table;
-        return view('core::Resource.index',compact('table'));
+        return view('future::Resource.index',compact('table'));
     }
 
     public function create()
     {
         $form = $this->form;
-        return view('core::Resource.create',compact('form'));
+        return view('future::Resource.create',compact('form'));
     }
 
     public function edit($id)
     {
         $form = $this->form;
-        return view('core::Resource.edit',compact('form','id'));
+        return view('future::Resource.edit',compact('form','id'));
     }
 }

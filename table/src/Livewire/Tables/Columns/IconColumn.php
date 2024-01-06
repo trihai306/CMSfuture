@@ -69,6 +69,6 @@ class IconColumn extends Column
         $class = $this->classCallback ? call_user_func($this->classCallback, $model) : '';
         $ariaHidden = $this->ariaHiddenCallback ? call_user_func($this->ariaHiddenCallback, $model) : 'true';
         $role = $this->roleCallback ? call_user_func($this->roleCallback, $model) : 'presentation';
-        return view('core::base.table.icon', compact('icon', 'color', 'size', 'tooltip', 'class', 'ariaHidden', 'role'));
+        return view('future::base.table.icon', compact('icon', 'color', 'size', 'tooltip', 'class', 'ariaHidden', 'role'));
     }
 }

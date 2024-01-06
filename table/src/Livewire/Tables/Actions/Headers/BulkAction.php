@@ -31,6 +31,6 @@ class BulkAction
     public function render()
     {
         $class= $this->class ?? 'btn btn-primary';
-        return view('core::livewire.table.actions.bulk-action', compact('class'));
+        return view('future::livewire.table.actions.bulk-action', compact('class'));
     }
 }

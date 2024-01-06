@@ -11,11 +11,4 @@
         </div>
     </div>
 </div>
-<script data-navigate-once>
-    window.onload = function() {
-        var loadingDiv = document.getElementById('page-loading');
-        if (loadingDiv) {
-            loadingDiv.style.display = 'none';
-        }
-    };
-</script>
+

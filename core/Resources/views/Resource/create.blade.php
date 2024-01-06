@@ -1,4 +1,4 @@
-@extends('core::layouts.app')
+@extends('future::layouts.app')
 @section('content')
     <!--begin::Content-->
     <div  class="content flex-row-fluid">

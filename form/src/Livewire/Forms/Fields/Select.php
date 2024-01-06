@@ -36,7 +36,7 @@ class Select extends Field
 
     public function render()
     {
-        return view('core::base.form.select', [
+        return view('future::base.form.select', [
             'isRequired' => $this->isRequired,
             'classes' => $this->classes,
             'attributes' => $this->getAttributes(),

@@ -23,7 +23,7 @@ class Radio extends Field
 
     public function render()
     {
-        return view('core::base.form.radio', [
+        return view('future::base.form.radio', [
             'isRequired' => $this->isRequired,
             'classes' => $this->classes,
             'attributes' => $this->getAttributes(),

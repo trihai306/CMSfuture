@@ -26,7 +26,7 @@ abstract class BaseTable extends Component
     use WithPagination, FilterColumnsTrait, PaginationTrait, ColumnVisibilityTrait, SortTrait, SearchTrait, SelectTrait, Exportable;
     use Functions,Importable,Can;
     use WithFileUploads;
-    protected string $view = 'core::livewire.base-table';
+    protected string $view = 'future::livewire.base-table';
     private $actions;
     protected array $select = [];
     protected string $model;
@@ -40,7 +40,7 @@ abstract class BaseTable extends Component
      */
     public function placeholder()
     {
-        return view('core::livewire.placeholder');
+        return view('future::livewire.placeholder');
     }
 
     /**
