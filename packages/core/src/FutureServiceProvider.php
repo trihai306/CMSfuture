@@ -16,15 +16,20 @@ class FutureServiceProvider extends ServiceProvider
     protected function autoRegisterLivewireComponents($directory)
     {
         $namespace = 'App\Future';
-        $files = File::allFiles($directory);
-        foreach ($files as $file) {
-            $componentPath = $file->getRelativePathName();
-            $classBasename = str_replace(['/', '.php'], ['\\', ''], $componentPath);
-            $className = $namespace . '\\' . $classBasename;
-            if (is_subclass_of($className, BaseForm::class) || is_subclass_of($className, BaseTable::class)) {
-                $alias = str_replace('\\', '.',$classBasename);
-                Livewire::component($alias, $className);
+        try {
+            $files = File::allFiles($directory);
+            foreach ($files as $file) {
+                $componentPath = $file->getRelativePathName();
+                $classBasename = str_replace(['/', '.php'], ['\\', ''], $componentPath);
+                $className = $namespace . '\\' . $classBasename;
+                if (is_subclass_of($className, BaseForm::class) || is_subclass_of($className, BaseTable::class)) {
+                    $alias = str_replace('\\', '.',$classBasename);
+                    Livewire::component($alias, $className);
+                }
             }
+        }
+        catch (\Exception $e) {
+            // do nothing
         }
     }
 }
