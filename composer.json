@@ -1,5 +1,5 @@
 {
-  "name": "future/cms",
+  "name": "livefuture/cms",
   "description": "future base admin",
   "type": "library",
   "require": {
