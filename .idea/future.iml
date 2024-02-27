@@ -7,10 +7,16 @@
       <sourceFolder url="file://$MODULE_DIR$/./packages/table/src" isTestSource="false" packagePrefix="Future\Table\" />
       <sourceFolder url="file://$MODULE_DIR$/packages/core/src" isTestSource="false" packagePrefix="Future\Core\" />
       <sourceFolder url="file://$MODULE_DIR$/packages/core/tests" isTestSource="true" packagePrefix="Future\Core\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/core/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/form/src" isTestSource="false" packagePrefix="Future\Form\" />
       <sourceFolder url="file://$MODULE_DIR$/packages/form/tests" isTestSource="true" packagePrefix="Future\Form\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/form/tests" isTestSource="true" />
       <sourceFolder url="file://$MODULE_DIR$/packages/table/src" isTestSource="false" packagePrefix="Future\Table\" />
       <sourceFolder url="file://$MODULE_DIR$/packages/table/tests" isTestSource="true" packagePrefix="Future\Table\Tests\" />
+      <sourceFolder url="file://$MODULE_DIR$/packages/table/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/core/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/form/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/table/tests" isTestSource="true" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/brick/math" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/carbonphp/carbon-doctrine-types" />
       <excludeFolder url="file://$MODULE_DIR$/vendor/composer" />
