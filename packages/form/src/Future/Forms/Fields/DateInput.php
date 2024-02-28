@@ -7,18 +7,23 @@ use Future\Form\Future\Forms\Field;
 
 class DateInput extends Field
 {
-    protected $placeholder = '';
-    protected $label = null;
-
-    public function placeholder(string $placeholder)
+    protected string $label;
+    protected string $format = 'DD/MM/YYYY';
+    public function label(string $label): Field
     {
-        $this->placeholder = $placeholder;
+        $this->label = $label;
         return $this;
     }
 
-    public function label(string $label)
+    public function defaultValue($value): Field
     {
-        $this->label = $label;
+        $this->defaultValue = $value;
+        return $this;
+    }
+
+    public function format(string $format = 'DD/MM/YYYY'): Field
+    {
+        $this->format = $format;
         return $this;
     }
 
@@ -31,6 +36,8 @@ class DateInput extends Field
             'attributes' => $this->getAttributes(),
             'placeholder' => $this->placeholder,
             'label' => $this->label,
+            'canHide' => $this->canHide,
+            'format' => $this->format,
         ])->render();
     }
 }

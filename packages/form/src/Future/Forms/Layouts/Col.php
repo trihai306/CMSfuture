@@ -37,9 +37,6 @@ class Col{
 
     public function schema(array $content)
     {
-//        foreach ($content as $item) {
-//            $this->content .= $item;
-//        }
         $this->content = $content;
         return $this;
     }

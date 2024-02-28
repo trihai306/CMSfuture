@@ -6,17 +6,15 @@ use Future\Form\Future\Forms\Field;
 
 class TextInput extends Field
 {
-    protected $isEmail = false;
-    protected $isPassword = false;
-    protected $placeholder = '';
+    protected bool $isEmail = false;
+    protected bool $isPassword = false;
     protected $maxLength = null;
     protected $pattern = null;
     protected $autocomplete = 'on';
-    protected $readOnly = false;
-    protected $disabled = false;
+    protected bool $readOnly = false;
+    protected bool $disabled = false;
     protected $size = null;
     protected $step = null;
-    protected $label = null;
 
     public function email()
     {
@@ -27,12 +25,6 @@ class TextInput extends Field
     public function password()
     {
         $this->isPassword = true;
-        return $this;
-    }
-
-    public function placeholder(string $placeholder)
-    {
-        $this->placeholder = $placeholder;
         return $this;
     }
 
@@ -77,13 +69,6 @@ class TextInput extends Field
         $this->step = $step;
         return $this;
     }
-
-    public function label(string $label)
-    {
-        $this->label = $label;
-        return $this;
-    }
-
     public function render()
     {
 

@@ -1,10 +1,10 @@
-<div class="collapse navbar-collapse" id="sidebar-menu">
+<div class="collapse navbar-collapse " id="sidebar-menu">
     <ul class="navbar-nav pt-lg-3">
         @foreach($menus as $menu)
             @if(Auth::user()->can($menu->permission))
                 @if($menu->children->isEmpty())
-                    <li class="nav-item @if(request()->is($menu->url)) active @endif">
-                        <a class="nav-link"  href="{{route($menu->permission)}}">
+                    <li class="nav-item  @if(request()->is($menu->url)) rounded rounded-2 bg-primary @endif">
+                        <a class="nav-link text-white" wire:navigate  href="{{route($menu->permission)}}">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         <i class="{{$menu->icon}}"></i>
                                     </span>
@@ -14,8 +14,8 @@
                         </a>
                     </li>
                 @else
-                    <li class="nav-item dropdown @if(request()->is($menu->url)) active @endif">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    <li class="nav-item  dropdown @if(request()->is($menu->url)) rounded rounded-2 bg-primary @endif">
+                        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                     <span class="nav-link-icon d-md-none d-lg-inline-block">
                                         <i class="{{$menu->icon}}"></i>
                                     </span>
@@ -26,7 +26,9 @@
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                             @foreach($menu->children as $child)
                                 @if(Auth::user()->can($child->permission))
-                                    <li><a class="dropdown-item" href="{{route($child->permission)}}">{{ $child->title }}</a></li>
+                                    <li><a class="dropdown-item text-white
+                                     @if(request()->is($child->url)) bg-primary @endif
+                                    " href="{{route($child->permission)}}">{{ $child->title }}</a></li>
                                 @endif
                             @endforeach
                         </ul>

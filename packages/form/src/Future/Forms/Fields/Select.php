@@ -7,7 +7,7 @@ use Future\Form\Future\Forms\Field;
 class Select extends Field
 {
     protected $options = [];
-    protected $label = null;
+    protected string $label;
 
     public function options(array $options)
     {
@@ -15,7 +15,7 @@ class Select extends Field
         return $this;
     }
 
-    public function modelData(string $modelClass, \Closure $transform)
+    public function model(string $modelClass, \Closure $transform)
     {
         $models = $modelClass::all();
         $this->options = $models->mapWithKeys($transform)->toArray();
@@ -28,9 +28,9 @@ class Select extends Field
         return $this;
     }
 
-    public function label(string $label)
+    public function multiple()
     {
-        $this->label = $label;
+        $this->StyleAttributes['multiple'] = 'multiple';
         return $this;
     }
 
@@ -43,6 +43,7 @@ class Select extends Field
             'options' => $this->options,
             'defaultValue' => $this->defaultValue,
             'label' => $this->label,
+            'canHide' => $this->canHide,
             'name' => $this->name,
         ]);
     }

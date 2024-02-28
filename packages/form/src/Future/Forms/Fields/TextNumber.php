@@ -9,8 +9,6 @@ class TextNumber extends Field
     protected $min = null;
     protected $max = null;
     protected $step = null;
-    protected $label = null;
-    protected $placeholder = null;
 
     public function min(int $min)
     {
@@ -30,18 +28,6 @@ class TextNumber extends Field
         return $this;
     }
 
-    public function label(string $label)
-    {
-        $this->label = $label;
-        return $this;
-    }
-
-    public function placeholder(string $placeholder)
-    {
-        $this->placeholder = $placeholder;
-        return $this;
-    }
-
     public function render()
     {
         return view('future::base.form.textnumber', [
@@ -54,6 +40,7 @@ class TextNumber extends Field
             'placeholder' => $this->placeholder,
             'label' => $this->label,
             'name' => $this->name,
+            'canHide' => $this->canHide,
         ]);
     }
 }
